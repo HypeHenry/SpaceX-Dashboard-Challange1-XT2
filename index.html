@@ -11,9 +11,7 @@
 
             var data = google.visualization.arrayToDataTable([
                 ['Label', 'Value'],
-                ['Speed', 10],
-                ['Acceleration', 55],
-                ['G-force', 68]
+                ['Speed', 10]
             ]);
 
             var options = {
@@ -38,14 +36,6 @@
 
             setInterval(function() {
                 data.setValue(0, 1, 600 + Math.round(60 * Math.random()));
-                chart.draw(data, options);
-            }, 300);
-            setInterval(function() {
-                data.setValue(1, 1, 800 + Math.round(60 * Math.random()));
-                chart.draw(data, options);
-            }, 300);
-            setInterval(function() {
-                data.setValue(2, 1, 1 + Math.round(2 * Math.random()));
                 chart.draw(data, options);
             }, 300);
         }
