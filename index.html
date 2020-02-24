@@ -7,6 +7,7 @@
         google.charts.load('current', {'packages':['gauge', 'corechart']});
         google.charts.setOnLoadCallback(drawChart);
         google.charts.setOnLoadCallback(drawCurveTypes);
+        google.charts.setOnLoadCallback(drawChartFuel);
 
 // speed meter
         function drawChart() {
@@ -75,6 +76,36 @@
             var chart = new google.visualization.LineChart(document.getElementById('chart_div_graff'));
             chart.draw(data, options_lines);
         }
+        // fuel
+        function drawChartFuel() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Storage", { role: "style" } ],
+                ["Water", 8.94, "#40a4df"],
+                ["kerosine", 10.49, "blue"],
+                ["oil", 19.30, "green"],
+                ["diesel", 21.45, "yellow"],
+                ["Gasoline", 24.45, "red"],
+
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                { calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation" },
+                2]);
+
+            var options = {
+                title: "Storage of Falcon 9 Fuel Gas, in g/cm^3",
+                width: 600,
+                height: 400,
+                bar: {groupWidth: "95%"},
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+            chart.draw(view, options);
+        }
 
 
     </script>
@@ -85,10 +116,9 @@
     <h1>Dashboard</h1>
     <h2>Voertuig informatie:</h2>
     <div class="container">
-        <div id="chart_div_speed" style="width: 100px; min-height: 40px;">
-        </div>
-        <div id="chart_div_graff">
-        </div>
+        <div id="chart_div_speed" style="width: 100px; min-height: 40px;"></div>
+        <div id="chart_div_graff"></div>
+        <div id="barchart_values"></div>
     </div>
 </div>
 
