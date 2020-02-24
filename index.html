@@ -45,31 +45,35 @@
 // graffic
         function drawCurveTypes() {
             var data = new google.visualization.DataTable();
-            data.addColumn('number', 'X');
-            data.addColumn('number', 'Falcon X');
-            data.addColumn('number', 'Falcon 9');
+            data.addColumn('number', 'x');
+            data.addColumn('number', 'values');
+            data.addColumn({id:'i0', type:'number', role:'interval'});
+            data.addColumn({id:'i1', type:'number', krole:'interval'});
+            data.addColumn({id:'i2', type:'number', role:'interval'});
+            data.addColumn({id:'i2', type:'number', role:'interval'});
+            data.addColumn({id:'i2', type:'number', role:'interval'});
+            data.addColumn({id:'i2', type:'number', role:'interval'});
 
             data.addRows([
-                [0, 0, 0],    [1, 10000, 50000],   [2, 230000, 150000],  [3, 170000, 90000],   [4, 180000, 100000],  [5, 90000, 50000],
-                [6, 110000, 30000],   [7, 270000, 190000],  [8, 330000, 250000],  [9, 400000, 320000],  [10, 320000, 240000], [11, 350000, 270000],
-                [12, 300000, 220000], [13, 400000, 320000], [14, 420000, 340000], [15, 470000, 390000], [16, 440000, 360000], [17, 480000, 400000],
-                [18, 520000, 440000], [19, 540000, 460000], [20, 420000, 340000]
-            ]);
+                [1, 100, 90, 110, 85, 96, 104, 120],
+                [2, 120, 95, 130, 90, 113, 124, 140],
+                [3, 130, 105, 140, 100, 117, 133, 139],
+                [4, 90, 85, 95, 85, 88, 92, 95],
+                [5, 70, 74, 63, 67, 69, 70, 72],
+                [6, 30, 39, 22, 21, 28, 34, 40],
+                [7, 80, 77, 83, 70, 77, 85, 90],
+                [8, 100, 90, 110, 85, 95, 102, 110]]);
 
-            var options = {
-                hAxis: {
-                    title: 'km'
-                },
-                vAxis: {
-                    title: 'Height'
-                },
-                series: {
-                    1: {curveType: 'function'}
-                }
+            var options_lines = {
+                title: 'Line intervals, default',
+                curveType: 'function',
+                lineWidth: 4,
+                intervals: { 'style':'line' },
+                legend: 'none'
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('chart_div_graff'));
-            chart.draw(data, options);
+            chart.draw(data, options_lines);
         }
 
 
