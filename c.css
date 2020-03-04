@@ -1,4 +1,27 @@
+/*  Variables */
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+/* reset */
+
+/* fonts*/
+
+/* mobiele styles */
+
+/* kleine tablet styles*/
+@media screen and ( min-width: 620px) {
+
+}
+
+/* Grote tablets & laptop styles */
+
+@media screen and (min-width: 960px){
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+}
 
 body, html {
     display: grid;
