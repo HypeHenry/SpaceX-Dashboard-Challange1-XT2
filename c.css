@@ -1,9 +1,40 @@
-/*  Variables */
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 
+/*  Variables */
+:root{
+    --primary: #4978AD;
+    --secondary: #181C1F;
+}
 /* reset */
-
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Oxanium Regular', serif;
+}
+/* base style*/
+body{
+    background: var(--secondary);
+    overflow-x: hidden;
+}
 /* fonts*/
+@font-face {
+    font-family: 'Oxanium Regular';
+    src: url("fonts/Oxanium/Oxanium-Regular.ttf");
+}
+
+h1, h2, h3{
+    color: #DDDBFF;
+    font-weight: normal;
+}
+
+h1{
+    font-size: 1.2em;
+}
+
+h2{
+    font-size: 1.6em;
+}
 
 /* mobiele styles */
 
@@ -16,21 +47,19 @@
 
 @media screen and (min-width: 960px){
 
+    body{
+        font-size: 18px;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
-
+    body{
+        font-size: 20px;
+    }
 }
 
-body, html {
-    display: grid;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
-}
+
 h1{
     display: inline-flex;
 }
