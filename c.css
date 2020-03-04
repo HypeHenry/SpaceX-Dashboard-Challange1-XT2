@@ -17,6 +17,20 @@ body{
     background: var(--secondary);
     overflow-x: hidden;
 }
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('https://nl.wikipedia.org/wiki/SpaceX#/media/Bestand:SpaceX-Logo.svg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
 /* fonts*/
 @font-face {
     font-family: 'Oxanium Regular';
@@ -24,7 +38,7 @@ body{
 }
 
 h1, h2, h3{
-    color: #DDDBFF;
+    color: var(--secondary);
     font-weight: normal;
 }
 
