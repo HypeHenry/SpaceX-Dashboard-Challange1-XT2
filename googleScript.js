@@ -64,9 +64,7 @@ function drawCurveTypes() {
         curveType: 'function',
         lineWidth: 4,
         intervals: { 'style':'line' },
-        legend: 'none',
-        textStyle: {color: '#FFF'},
-        backgroundColor: '#1E2326'
+        legend: 'none'
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div_graff'));

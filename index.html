@@ -11,8 +11,9 @@
         <figure>
             <img src="img/spacex_logo_white.png" alt="logo">
         </figure>
+        <h1>Dashboard</h1>
     </header>
-    <main>
+
         <video poster="https://nl.wikipedia.org/wiki/SpaceX#/media/Bestand:SpaceX-Logo.svg" id="bgvid" playsinline autoplay muted loop>
             <!--
           - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
@@ -21,19 +22,18 @@
             <source src="video/spacex.mp4" type="video/mp4">
 
         </video>
-        <h1>Dashboard</h1>
-        <article class="grid">
-            <h2>Zwaarte kracht diagnose</h2>
-            <div id="chart_div_graff"></div>
-        </article>
-        <article class="grid">
-            <h2>speed</h2>
-            <div id="chart_div_speed"></div>
-        </article>
-        <article class="grid">
-            <h2>Fuel Storage</h2>
-            <div id="barchart_values"></div>
-        </article>
+    <main>
+        <div class="article grid">
+            <article>
+                <h2>speed</h2>
+                <div id="chart_div_speed"></div>
+                <h2>Fuel Storage</h2>
+                <div id="barchart_values"></div>
+                <h2>Zwaarte kracht diagnose</h2>
+                <div id="chart_div_graff"></div>
+            </article>
+        </div>
+
     </main>
     <script src="googleScript.js"></script>
 </body>

@@ -2,7 +2,7 @@
 
 /*  Variables */
 :root{
-    --primary: #4978AD;
+    --primary: #F2F2F2;
     --secondary: #181C1F;
 }
 /* reset */
@@ -42,16 +42,54 @@ h1, h2, h3{
     font-weight: normal;
 }
 
-h1{
+h1, figure{
     font-size: 1.2em;
+    border-bottom: 0;
+    text-align: center;
 }
 
 h2{
     font-size: 1.6em;
+    color: var(--primary);
+    text-align: center;
 }
 
 /* mobiele styles */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+header{
+    margin: 0 20px;
+}
+header h1{
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+}
+main{
+    background-color: rgba(24, 28, 31, .4);
+    padding: 30px 5px;
+}
+article {
+    grid-column: 1/9;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
 
+
+}
+article * {
+    margin: 0 20px;
+    flex-wrap: wrap;
+    align-self: center;
+
+}
+
+div{
+    margin: 10px auto;
+}
 /* kleine tablet styles*/
 @media screen and ( min-width: 620px) {
 
@@ -71,25 +109,4 @@ h2{
     body{
         font-size: 20px;
     }
-}
-
-
-h1{
-    display: inline-flex;
-}
-
-a {
-    color: #f27173;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #e25f5f;
-    text-decoration: underline;
-}
-
-
-
-body{
-    background-color: #181C1F;
 }
