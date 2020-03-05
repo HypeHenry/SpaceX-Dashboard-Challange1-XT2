@@ -69,10 +69,10 @@ header h1{
     border-bottom: 3px solid var(--primary);
 }
 main{
-    background-color: rgba(24, 28, 31, .4);
     padding: 30px 5px;
 }
 article {
+
     grid-column: 1/9;
     margin: 20px 0;
     display: flex;
