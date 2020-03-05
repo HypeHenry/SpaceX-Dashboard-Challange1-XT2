@@ -55,26 +55,22 @@ h2{
 }
 
 /* mobiele styles */
-.grid{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-}
+
+
+
 header{
-    margin: 0 20px;
+    /*margin: 0 20px;*/
 }
 header h1{
-    grid-column: 1/4;
-    grid-row: 1;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--primary);
+     border-bottom: 3px solid var(--primary);
 }
 main{
     padding: 30px 5px;
+    background-color: rgba(24, 28, 32, .7);
 }
 article {
 
     grid-column: 1/9;
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
 
@@ -87,9 +83,8 @@ article * {
 
 }
 
-div{
-    margin: 10px auto;
-}
+
+
 /* kleine tablet styles*/
 @media screen and ( min-width: 620px) {
 

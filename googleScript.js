@@ -3,6 +3,7 @@ google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawCurveTypes);
 google.charts.setOnLoadCallback(drawChartFuel);
 
+
 // speed meter
 function drawChart() {
 
@@ -13,12 +14,13 @@ function drawChart() {
 
     var options = {
 
-        width: 900, height: 380,
         redFrom: 900, redTo: 1000,
         yellowFrom:750, yellowTo: 900,
         greenFrom: 100, greenTo: 330,
         minorTicks: 10, majorTicks: ['0','250','500','750','1000'],
-        min: 90, max: 1000
+        min: 90, max: 1000,
+        width: 200,
+
     };
 
     // var formatter = new google.visualization.NumberFormat({
@@ -64,7 +66,8 @@ function drawCurveTypes() {
         curveType: 'function',
         lineWidth: 4,
         intervals: { 'style':'line' },
-        legend: 'none'
+        legend: 'none',
+        width: 200
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div_graff'));
@@ -78,7 +81,7 @@ function drawChartFuel() {
         ["kerosine", 10.49, "blue"],
         ["oil", 19.30, "green"],
         ["diesel", 21.45, "black"],
-        ["Gasoline", 24.45, "red"],
+        ["gas", 24.45, "red"],
 
     ]);
 
@@ -91,12 +94,13 @@ function drawChartFuel() {
         2]);
 
     var options = {
+
         title: "Storage of Falcon 9 Fuel Gas, in g/cm^3",
-        width: 600,
-        height: 400,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
+        width: 210
     };
     var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
     chart.draw(view, options);
 }
+
