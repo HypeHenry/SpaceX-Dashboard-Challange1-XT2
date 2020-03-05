@@ -57,30 +57,17 @@ h2{
 /* mobiele styles */
 
 
-
-header{
-    /*margin: 0 20px;*/
-}
 header h1{
      border-bottom: 3px solid var(--primary);
 }
 main{
-    padding: 30px 5px;
-    background-color: rgba(24, 28, 32, .7);
-}
-article {
-
-    grid-column: 1/9;
-    display: flex;
-    flex-direction: column;
-
 
 }
-article * {
-    margin: 0 20px;
-    flex-wrap: wrap;
-    align-self: center;
-
+article{
+    background: RGBA(30, 35, 38, 0.7);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 
