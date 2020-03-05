@@ -9,22 +9,40 @@ function falconRader() {
         data:{
             labels:['Mars', 'Earth', 'Venus', 'Moon', 'Jupiter','Saturnis'],
             datasets:[{
-                label:'Falcon 9 radar',
+
+                label:'Afstand van Falcon 9 ',
                 data:[65,59,90,81,56,55,40],
                 fill: true,
-                backgroundColor: '#27ae60',
+                backgroundColor: 'rgba(255, 255, 255, 0.7)',
                 borderColor: '#ae331f',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: '#fff',
+                pointBorderColor: '#000',
+                pointHoverBackgroundColor: '#000',
+                pointHoverBorderColor: '#00',
             }]
         },
         options:{
             title:{
-                display:true
-            },
+                display:true,
+                text: 'Falcon 9 Radar',
+                fontStyle: 'bold'
 
+            },
+            scale: {
+                angleLines: {
+                    display: true,
+                    color: '#FFF',
+                },
+                gridLines: {
+                    display: true,
+                    color: '#FFF',
+                },
+                ticks: {
+                    fontColor: "white",
+                    fontSize: 18,
+                }
+            },
             legend:{
+                fontColor: 'black',
                 display:false
             },
             tooltips:{
