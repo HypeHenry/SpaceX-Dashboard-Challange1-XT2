@@ -34,7 +34,7 @@ video {
 /* fonts*/
 @font-face {
     font-family: 'Oxanium Regular';
-    src: url("fonts/Oxanium/Oxanium-Regular.ttf");
+    src: url("../fonts/Oxanium/Oxanium-Regular.ttf");
 }
 
 h1, h2, h3{

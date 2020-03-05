@@ -3,8 +3,8 @@
     <title>tesla x hypehenry</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="c.css" rel="stylesheet" as="style">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="css/c.css" rel="stylesheet" as="style">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 </head>
 <body>
     <header>
@@ -23,23 +23,19 @@
 
         </video>
     <main>
-        <div class="article grid">
+        <div class="radar">
             <article id="grid1">
-                <h2>speed</h2>
-                <div id="chart_div_speed" class="google"></div>
+                <canvas id="myRadar"></canvas>
             </article>
-            <article id="grid2">
-                <h2>Fuel Storage</h2>
-                <div id="barchart_values" class="google"></div>
+            <article class="next planet resources">
+                <canvas id="myResources"></canvas>
             </article>
-             <article id="grid3">
-                 <h2>Zwaarte kracht diagnose</h2>
-                <div id="chart_div_graff" class="google"></div>
+            <article id="fuel">
+                <canvas id="myfuel"></canvas>
             </article>
-
         </div>
 
     </main>
-    <script src="googleScript.js"></script>
+    <script src="js/googleScript.js"></script>
 </body>
 </html>
