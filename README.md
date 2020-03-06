@@ -25,7 +25,7 @@ var myRader = new Chart(radarChart, {
 ```
 
 
-En om de functie aan te roepen heb ik nog een functie gemaakt en verder met window.load opgeroepen
+En om de functie aan te roepen heb ik nog een functie gemaakt en verder met window.load opgeroepen👨🏾‍💻
 ```
 
 function startScript(){
@@ -36,3 +36,6 @@ function startScript(){
 window.onload = startScript();
 ```
 
+tha da 🔥🔥🔥
+
+ps: ik heb een video gebruikt voor me achtergrond 
