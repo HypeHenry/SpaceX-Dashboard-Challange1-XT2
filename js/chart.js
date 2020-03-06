@@ -97,9 +97,45 @@ function resourceRadar() {
     });
 }
 
+function fuelTank() {
+    var barChart = document.getElementById('myfuel').getContext('2d');
+
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#FFF';
+
+    var myFuel = new Chart(barChart, {
+        type:'horizontalBar',
+        data: {
+            labels:['Diesel', 'kerosine', 'gasoline', 'coolant', 'water' ],
+            datasets: [{
+                data: [33, 46, 53, 80, 90],
+                backgroundColor: ['rgba(0,0,0,0.7)','rgba(161, 202, 241, 0.7)','rgba(221,15,33,0.7)','rgba(57,255,20,0.7)','rgba(224,255,255,0.7)'],
+
+            }]
+    },
+        options:{
+            title:{
+                display:true,
+                text: 'Falcon 9 fuel',
+                fontStyle: 'bold',
+                fontFamily: 'Oxanium Regular'
+
+            },
+            legend:{
+                fontColor: 'black',
+                display:false
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+}
+
 
 function startScript(){
     falconRader();
     resourceRadar();
+    fuelTank();
 }
 window.onload = startScript();
