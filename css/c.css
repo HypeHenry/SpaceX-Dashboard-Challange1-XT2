@@ -86,29 +86,29 @@ article{
 }
 
 .pie{
-    min-width: 200px;
-    width: 300px;
-    height: 400px;
-    margin: 25px auto;
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
 
 }
 .radar{
-    min-width: 200px;
-    width: 300px;
-    height: 400px;
-    margin: 25px auto;
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
 
 }
 .bar{
-    min-width: 200px;
-    width: 300px;
-    height: 400px;
-    margin: 25px auto;
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
 }
 
 
 
-/* kleine tablet styles*/
+/*  tablet styles*/
 @media screen and ( min-width: 620px) {
     html {
         height: 100%;
@@ -127,19 +127,10 @@ article{
 
 }
 
-/* Grote tablets & laptop styles */
-
-@media screen and (min-width: 960px){
-
-    body{
-        font-size: 18px;
-    }
-}
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
-    article{
-        width: 30%;
-    }
-
+   .pie .radar{
+       width: 50%;
+   }
 }
