@@ -108,7 +108,7 @@ function fuelTank() {
         data: {
             labels:['Diesel', 'kerosine', 'gasoline', 'coolant', 'water' ],
             datasets: [{
-                data: [33, 46, 53, 80, 90],
+                data: [33, 46, 53, 84, 87],
                 backgroundColor: ['rgba(0,0,0,0.7)','rgba(161, 202, 241, 0.7)','rgba(221,15,33,0.7)','rgba(57,255,20,0.7)','rgba(224,255,255,0.7)'],
 
             }]
