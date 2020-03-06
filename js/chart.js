@@ -1,13 +1,13 @@
 function falconRader() {
     var radarChart = document.getElementById('myRadar').getContext('2d');
 
-    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontSize = 25;
     Chart.defaults.global.defaultFontColor = '#fff';
 
-    var massPopChart = new Chart(radarChart, {
+    var myRader = new Chart(radarChart, {
         type:'radar',
         data:{
-            labels:['Mars', 'Earth', 'Venus', 'Moon', 'Jupiter','Saturnis'],
+            labels:['Mars', 'Venus', 'Earth', 'Moon', 'Jupiter','Saturnis'],
             datasets:[{
 
                 label:'Afstand van Falcon 9 ',
@@ -24,7 +24,8 @@ function falconRader() {
             title:{
                 display:true,
                 text: 'Falcon 9 Radar',
-                fontStyle: 'bold'
+                fontStyle: 'bold',
+                fontFamily: 'Oxanium Regular'
 
             },
             scale: {
@@ -51,7 +52,54 @@ function falconRader() {
         }
     });
 }
+
+function resourceRadar() {
+
+    var pieChart = document.getElementById('myResources').getContext('2d');
+
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontColor = '#fff';
+
+    var myResources = new Chart(pieChart, {
+        type:'pie',
+        data:{
+            labels:['Water', 'Iridium', 'Kobalt', 'Germanium', 'Indium','Scandium', 'Niobium'],
+            datasets:[{
+
+                label:'Afstand van Falcon 9 ',
+                data:[65,59,90,81,56,55,40],
+                fill: true,
+                backgroundColor: ['rgba(0,123,180,0.7)','rgba(174,51,31,0.7)','rgba(85,161,58,0.7)','rgba(161,23,147,0.7)','rgba(255,53,0,0.7)','rgba(0,0,0,0.7)','rgba(255,255,255,0.7)'],
+                borderColor: '#011126',
+                pointBorderColor: '#000',
+                pointHoverBackgroundColor: '#000',
+                pointHoverBorderColor: '#00',
+            }]
+        },
+        options:{
+            responsive: true,
+            title:{
+                display:true,
+                text: 'Next Planet: Resourse ',
+                fontStyle: 'bold',
+                fontFamily: 'Oxanium Regular'
+
+            },
+
+            legend:{
+                fontColor: 'black',
+                display:true
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+}
+
+
 function startScript(){
     falconRader();
+    resourceRadar();
 }
 window.onload = startScript();
