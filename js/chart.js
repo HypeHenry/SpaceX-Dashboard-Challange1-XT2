@@ -21,6 +21,8 @@ function falconRader() {
             }]
         },
         options:{
+            responsive: true,
+            maintainAspectRatio:false,
             title:{
                 display:true,
                 text: 'Falcon 9 Radar',
@@ -78,6 +80,7 @@ function resourceRadar() {
         },
         options:{
             responsive: true,
+            maintainAspectRatio:false,
             title:{
                 display:true,
                 text: 'Next Planet: Resourse ',
@@ -114,6 +117,8 @@ function fuelTank() {
             }]
     },
         options:{
+            responsive: true,
+            maintainAspectRatio:false,
             title:{
                 display:true,
                 text: 'Falcon 9 fuel',
